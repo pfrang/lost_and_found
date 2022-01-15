@@ -1,0 +1,12 @@
+
+<ul>
+  <% @pets.each do |pet| %>
+  <li>
+    <%= link_to pet.name, pet_path(pet) %> | <%= pet.species %> | <%= pet.found_on %>
+    <%= link_to "Delete", pet_path(pet), method: :DELETE %>
+  </li>
+  <% end %>
+</ul>
+
+
+<%= link_to 'Report a pet as found', new_pet_path %>

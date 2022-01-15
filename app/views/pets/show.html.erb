@@ -1,0 +1,8 @@
+<h2><%= @pet.name %></h2>
+
+<img src="<%= @pet.photo_url if @pet.photo_url%>">
+
+<% if @pet.found_on %>
+  <p> <%= @pet.name %> was found on <%= @pet.found_on %> </p>
+<% end %>
+<%= link_to "Go back", root_path %>
